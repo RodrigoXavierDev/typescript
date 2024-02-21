@@ -13,8 +13,6 @@ class Funcionario {
             this.data_nascimento = data_nascimento;
     }
 }
-const funcionario1 = new Funcionario('Fulano', 'fulano@gmail.com', '84999999999', 'medico', new Date("2023-02-20"));
-console.log(funcionario1);
 class Paciente {
     nome;
     telefone;
@@ -31,8 +29,6 @@ class Paciente {
             this.data_nascimento = data_nascimento;
     }
 }
-const paciente1 = new Paciente('silcrano', '84987654321', 'tosse', '18', '77777777777', new Date("2023-02-20"));
-console.log(paciente1);
 class Consulta {
     hospital;
     localicacao;
@@ -49,5 +45,9 @@ class Consulta {
             this.convenio = convenio;
     }
 }
-const consulta1 = new Consulta('Hospital das dores', 'Rua das curas', 'Fulano', 'Silcrano', new Date("2023-02-20"), true);
+const funcionario1 = new Funcionario('Fulano', 'fulano@gmail.com', '84999999999', 'medico', new Date("2023-02-20"));
+const paciente1 = new Paciente('silcrano', '84987654321', 'tosse', '18', '77777777777', new Date("2023-02-20"));
+const consulta1 = new Consulta('Hospital das dores', 'Rua das curas', funcionario1, paciente1, new Date("2023-02-20"), true);
+console.log(paciente1);
+console.log(funcionario1);
 console.log(consulta1);
