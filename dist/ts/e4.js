@@ -14,6 +14,14 @@ class Projeto {
             this.marco = marco,
             this.prazo = prazo;
     }
+    mostrarDados() {
+        console.log(`Status${this.status}`);
+        console.log(`Projeto para começar: ${this.para_começar}`);
+        console.log(`Nome: ${this.nome}`);
+        console.log(`Descrição: ${this.descricao}`);
+        console.log(`Marco: ${this.marco}`);
+        console.log(`Prazo de entrega: ${this.prazo}`);
+    }
 }
 class Tarefa {
     individual;
@@ -30,6 +38,14 @@ class Tarefa {
             this.status = status,
             this.entrega = entrega;
     }
+    mostrarDados() {
+        console.log(`Tarefa individual: ${this.individual}`);
+        console.log(`Tarefa coletiva: ${this.coletiva}`);
+        console.log(`Membros: ${this.membros}`);
+        console.log(`Responsavel pelo projeto: ${this.responsavel}`);
+        console.log(`Status: ${this.status}`);
+        console.log(`Entrega: ${this.entrega}`);
+    }
 }
 class Comunicacao {
     projeto;
@@ -42,10 +58,16 @@ class Comunicacao {
             this.arquivos = arquivos,
             this.registro = registro;
     }
+    mostrarDados() {
+        console.log(`Projeto: ${this.projeto}`);
+        console.log(`Mensagem: ${this.mensagem}`);
+        console.log(`Arquivos: ${this.arquivos}`);
+        console.log(`Registro: ${this.registro}`);
+    }
 }
 const projeto1 = new Projeto('Iniciado', 'Programa de Banco', 'Programa de Supermercado', 'Projeto para ajudar na logistica de um supermercado', 'iniciar e finalizar', new Date("2025-05-25"));
 const tarefa1 = new Tarefa('nao', 'sim', 5, 'fulano', 'finalizado', new Date("2024-02-21"));
 const comunicacao1 = new Comunicacao(projeto1, 'vamos começar um projeto novo', 'Projeto.pdf', 'Projeto novo');
-console.log(projeto1);
-console.log(tarefa1);
-console.log(comunicacao1);
+console.log(projeto1.mostrarDados());
+console.log(tarefa1.mostrarDados());
+console.log(comunicacao1.mostrarDados());
